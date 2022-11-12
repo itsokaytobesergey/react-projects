@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import Dropdown from "./Select/Dropdown"
+import Dropdown from "./Dropdown.jsx"
 
 //Закрытие на esc
 function Select({ subjects }) {
@@ -21,7 +21,7 @@ function Select({ subjects }) {
   return (
     <>
       <div className="Subject">
-        <label>Предмет:</label>
+        <label>{subjects[subjects.length - 1].text}</label>
         <button
           type="button"
           className="input-button"

@@ -42,6 +42,7 @@ body {
   padding: 7px;
   display: inline-block;
   width: 182px;
+  cursor: pointer;
 }
 .dropdown-button {
   align-items: center;
