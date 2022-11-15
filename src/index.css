@@ -22,3 +22,6 @@ nav a {
 nav a:hover {
   text-decoration: underline;
 }
+.anotherPage {
+  margin: 0 auto;
+}
