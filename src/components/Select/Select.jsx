@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react"
 import Dropdown from "./Dropdown.jsx"
 
-//Закрытие на esc
-function Select({ subjects }) {
+function Select({ subjects, setIsEmpty, isEmpty }) {
+  //Закрытие на esc
   useEffect(() => {
     function handleEscapeKey(event: KeyboardEvent) {
       if (event.code === "Escape") {
@@ -21,10 +21,11 @@ function Select({ subjects }) {
   return (
     <>
       <div className="Subject">
-        <label>{subjects[subjects.length - 1].text}</label>
+        <label htmlFor="select-button">{subjects[subjects.length - 1].text}</label>
         <button
+          id="select-button"
           type="button"
-          className="input-button"
+          className={`input-button ${isEmpty ? "error" : ""}`}
           onClick={() => {
             setIsDropdownVisible(!isDropdownVisible)
           }}
@@ -32,6 +33,7 @@ function Select({ subjects }) {
           {value.text}
         </button>
         <Dropdown
+          setIsEmpty={setIsEmpty}
           subjects={subjects}
           value={value}
           setValue={setValue}

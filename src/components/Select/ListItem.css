@@ -7,7 +7,7 @@ body {
   height: 117px;
   width: 100%;
   position: absolute;
-  top: 55px;
+  top: 48px;
   padding: 0;
   overflow-y: auto;
   z-index: 99;
@@ -28,6 +28,10 @@ body {
   line-height: 1.38;
   padding: 7px;
 }
+.Name input.error,
+.Telefon input.error {
+  border: 1px solid red;
+}
 
 .Subject {
   position: relative;
@@ -43,6 +47,9 @@ body {
   display: inline-block;
   width: 182px;
   cursor: pointer;
+}
+.input-button.error {
+  border: 1px solid red;
 }
 .dropdown-button {
   align-items: center;
@@ -82,4 +89,8 @@ body {
 .Telefon label,
 .Subject label {
   width: 110px;
+}
+.active {
+  border-bottom: 3px solid #0f79db;
+  text-decoration: none;
 }

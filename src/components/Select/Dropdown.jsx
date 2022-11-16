@@ -9,7 +9,7 @@ const checkTicket = (
   </svg>
 )
 
-function Dropdown({ subjects, value, setValue, isDropdownVisible, setIsDropdownVisible }) {
+function Dropdown({ subjects, value, setValue, isDropdownVisible, setIsDropdownVisible, setIsEmpty }) {
   return (
     <>
       {isDropdownVisible && (
@@ -21,6 +21,7 @@ function Dropdown({ subjects, value, setValue, isDropdownVisible, setIsDropdownV
                 onClick={() => {
                   setValue(subject)
                   setIsDropdownVisible(!isDropdownVisible)
+                  setIsEmpty(false)
                 }}
                 key={subject.id}
               >
