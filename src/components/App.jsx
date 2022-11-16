@@ -6,7 +6,7 @@ import "../App.css"
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/React">
       <div className="App">
         <Routes>
           <Route path="/" element={<MainLayout />}>
