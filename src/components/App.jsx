@@ -2,11 +2,11 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import MainLayout from "./MainLayout"
 import CustomReactSelect from "./Select/CustomReactSelect"
 import About from "./About"
-import "../App.css"
+import "./App.css"
 
 function App() {
   return (
-    <BrowserRouter basename="/React">
+    <BrowserRouter>
       <div className="App">
         <Routes>
           <Route path="/" element={<MainLayout />}>
